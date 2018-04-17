@@ -1,6 +1,6 @@
 <!--pages/fc3dfilter/even/even.wxml-->
 <import src="../../common/roundnooption"/>
 <view class='even_group'>
-    <view class="{{gropu[index] == true?' number_choose_item_red':''}}" wx:for="{{even}}" data-sel="{{index}}" bindtap="changSel">{{item}}</view>
+    <view class="{{gropu[index] == true?' number_choose_item_red':''}}" wx:for="{{even}}" style="{{index==6?'width:auto;padding:0 10rpx;':''}}" data-sel="{{index}}" bindtap="changSel">{{item}}</view>
 </view>
 <template is="footer" data=""/>

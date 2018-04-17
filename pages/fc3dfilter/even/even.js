@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    even: ['没有连号', '一组二连号', '一组三连号' ],
-    gropu: [false, false, false]
+    even: ['没有连号', '一组二连号', '一组三连号', '一组四连号', '一组五连号', '两组二连号', '一组二连号，一组三连号', ],
+    gropu: [false, false, false, false, false, false, false]
   },
 
   /**
@@ -16,7 +16,7 @@ Page({
     var choosePage = wx.getStorageSync('choose');
     if (choosePage == '2') {
       var even = ['没有连号', '一组二连号', '一组三连号', '一组四连号', '一组五连号', '两组二连号'];
-      var gropu = [false, false, false]
+      var gropu = [false, false, false, false, false, false, false]
     }
   },
   changSel: function (e) {
@@ -25,7 +25,6 @@ Page({
     var group = that.data.gropu;
     group[sel] = !group[sel];
     var itm = "gropu["+sel+"]";
-    console.log(group[sel] );
     that.setData({
       [itm]:group[sel]
     })

@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cqssc/cqssc",
     "pages/logs/logs",
+    "pages/filtertool/filtertool",
     "pages/fc3dfilter/fc3dfilter",
+    "pages/rwfilter/rwfilter",
     "pages/fc3dfilter/subpage/dmz",
     "pages/fc3dfilter/position/position",
     "pages/fc3dfilter/numb/numb",

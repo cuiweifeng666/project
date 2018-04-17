@@ -11,7 +11,7 @@ App({
      wx.setStorageSync('tiao02', []);
      wx.setStorageSync('group', 0);
     // 登录
-    //  wx.redirectTo({ url: "pages/instructor/instructor"})
+     wx.redirectTo({ url: "pages/rwfilter/rwfilter"})
     //  wx.redirectTo({ url: "pages/fc3dfilter/subpage/dmz" })
     wx.login({
       success: function(code) {
