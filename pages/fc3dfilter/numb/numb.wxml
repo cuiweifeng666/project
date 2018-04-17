@@ -1,0 +1,14 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+ <template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+      <view class='num_code'>
+          <view wx:for="{{['全奇','全偶','全质','全合']}}" data-i="{{index}}" bindtap="select" class="num_detail{{sle[index] == true ? ' red' : ''}}">{{item}}</view>
+      </view>
+      <template is="ji" data="{{...boxAdd}}"/>
+  <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>
+

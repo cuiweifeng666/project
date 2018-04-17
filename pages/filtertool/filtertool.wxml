@@ -1,0 +1,36 @@
+<!--pages/filtertool/filtertool.wxml-->
+<import src="../common/roundnooption"/>
+   
+<template is="head" data="{{...head}}"/>
+  
+  <view class='tooltitle'  >
+      <block wx:for="{{title.one}}">
+           <navigator url="{{item.tourl}}" hover-class="none"   >
+          <text>{{item.name}}</text>
+          </navigator>
+      </block>
+      
+  </view>
+<template is="head" data="{{...head2}}"/>
+   <view class='tooltitle'  >
+      <block wx:for="{{title.two}}" >
+           <navigator url="{{item.tourl}}" hover-class="none" >
+          <text class='size'>{{item.name}}</text>
+          </navigator>
+      </block>
+      
+  </view>
+  <!-- <view class='tooltitle'  >
+      <block wx:for="{{title.one}}">
+          <text>{{item}}</text>
+      </block>
+      
+  </view>
+  <block wx:for="{{list.data}}" wx:key="{{list.data}}">
+    <navigator url="{{item.tourl}}" hover-class="navigator-hover" class="gv_list_item">
+        <image src="{{item.imgurl}}" class="gv_list_img"></image>
+        <view class="right">
+        <text class="gv_list_title">{{item.title}}</text>
+        </view>
+    </navigator>
+  </block> -->

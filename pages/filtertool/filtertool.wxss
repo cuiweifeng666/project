@@ -1,0 +1,52 @@
+/* pages/filtertool/filtertool.wxss */
+/*过滤工具列表*/
+@import '../common/roundnooption.wxss';
+page{
+  padding:20rpx 0;
+}
+.gv_list{
+	padding-left:.2rem;
+	background:#fff;
+}
+.gv_list_item{
+	display:-webkit-box;
+	display:-moz-box;
+	border-bottom:1px solid #e6e6e6;
+	/* background:url(../../web/images/yc_icon2.png) no-repeat 95% center; */
+	padding:.2rem 0;
+	-webkit-box-align:center;
+}
+.gv_list_img{
+  margin-right:.5rem;
+    display:block;  
+    width:45px;
+    height:45px;
+}
+.gv_list_title{
+	font-size:1rem;
+	color:#4d4d4d;
+	font-weight:bold;
+}
+.tooltitle {
+  padding:10rpx 30rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+.tooltitle text{
+  padding:20rpx 30rpx;
+  display:inline-block;
+  line-height:30rpx;
+  font-size:28rpx;
+  margin-right:16rpx;
+  margin-bottom:20rpx;
+  text-align: center;
+  color: #4a4a4a;
+  border:1rpx solid #e6e6e6;
+}
+.number_box_h1 {
+  border: none;
+}
+.tooltitle  .size {
+  margin-right:24rpx;
+  padding:20rpx 10rpx;
+}

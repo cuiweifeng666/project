@@ -1,0 +1,74 @@
+.number {
+  padding:30rpx 40rpx 10rpx ;
+  border-bottom: 1rpx solid #ccc;
+}
+.number .num_box {
+  width:55rpx;
+  height:55rpx;
+  box-sizing: border-box;
+  margin-right:14rpx;
+  text-align: center;
+  line-height: 55rpx;
+  display:inline-block;
+  border: 1px solid #ccc;
+  margin-bottom:20rpx;
+  color: #666;
+}
+.btn {
+  margin-top:20rpx;
+  text-align:center;
+  width:100%;
+}
+.btn .cancel {
+  display:inline-block;
+  padding:15rpx 100rpx;
+  background:#ccc;
+  margin-right:20rpx;
+  color:#fff;
+  border-radius:5rpx;
+}
+.btn .sure {
+  display:inline-block;
+  padding:15rpx 100rpx;
+  background:#DA3231;
+  color:#fff;
+  border-radius:5rpx;
+}
+.fl {
+  float:left;
+}
+.fr  {
+  float:righr;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear:both;
+}
+.number_choose_item_red{
+	color:#fff!important;
+	border:1px solid #d70e07!important;
+	background:#d70e07!important;
+}
+.select {
+  padding:15rpx 20rpx;
+  color:#666;
+}
+.select text {
+  display: inline-block;
+  width:180rpx;
+  color:#666;
+}
+.select_name  {
+  width:500rpx;
+  display: inline-block;
+  padding-left:20rpx;
+}
+.select_group  {
+  display: inline-block;
+  margin-right: 20rpx;
+  padding:5rpx 40rpx;
+  border-radius:6rpx;
+  margin-bottom: 20rpx;
+  border:1rpx solid #666;
+}

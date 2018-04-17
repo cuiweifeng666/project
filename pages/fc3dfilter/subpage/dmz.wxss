@@ -1,0 +1,44 @@
+/* pages/fc3dfilter/subpage/dmz.wxss */
+@import '../../common/roundnooption.wxss';
+
+.number_box_context  {
+  padding:20rpx 0;
+  line-height:45rpx;
+  font-size:30rpx;
+
+	color:#454545;
+     padding-bottom:0;
+}
+.number_box_context text {
+  display: inline-block;
+  text-align: right;
+  width:130rpx;
+  padding-right:10rpx;
+}
+.number_box_context view view {
+  width:45rpx;
+  height:45rpx;
+  line-height: 45rpx;
+  border-radius:50%;
+} 
+.number_box_footer view view {
+  width:45rpx;
+  height:45rpx;
+  line-height: 45rpx;
+  border-radius:50%;
+} 
+.number_box_footer text {
+  font-size:30rpx;
+   text-align: right;
+
+  width:130rpx;
+  padding-right:10rpx;
+}
+.gray  {
+  display: block;
+  height:40rpx;
+  background:#f5f5f5;
+}
+.number_box  {
+  border-bottom:1rpx  solid #f5f5f5;
+}

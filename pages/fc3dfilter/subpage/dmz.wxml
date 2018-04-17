@@ -1,0 +1,13 @@
+<!--pages/fc3dfilter/subpage/dmz.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<view>  
+  <template is="head" data="{{...head}}" /> 
+  <view class='gray'></view>
+   <template is="round" data="{{...y.item1}}" />  
+   <template is="round" data="{{...y.item2}}" />  
+   <template is="round" data="{{...y.item3}}" />  
+     <template is="codeAll" /> 
+    <template is="footer" />
+
+</view>

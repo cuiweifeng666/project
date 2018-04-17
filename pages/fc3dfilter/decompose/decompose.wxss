@@ -1,0 +1,67 @@
+/* pages/fc3dfilter/space/space.wxss */
+@import '../../common/roundnooption.wxss';
+.numberGroup{
+  margin:20rpx ;
+  border:1rpx solid #e6e6e6;
+   color: #4a4a4a;
+   display: flex;
+}
+.title {
+  width:140rpx;
+  text-align: center;
+  height: 100%;
+  line-height: 160rpx;
+  padding:20rpx;
+}
+.num_code {
+  padding:20rpx;
+  width:520rpx;
+  display:flex;
+  justify-content:left;
+  flex-wrap: wrap;
+  height:auto;
+  text-align: center;
+  line-height:30rpx;
+  font-size:28rpx;
+}
+.num_detail  {
+  display:block;
+  padding:20rpx 20rpx;
+  margin-bottom:20rpx;
+  margin-right:20rpx;
+  border:1rpx solid #e6e6e6;
+}
+.pic_group {
+  width:100%;
+  height:80rpx;
+  display: flex;
+  justify-content: center;
+}
+.pic_group image {
+  width:200rpx;
+  height:80rpx;
+}
+.text  {
+  margin: 20rpx;
+  width:auto;
+  height:200rpx;
+  border:1rpx solid #e6e6e6 ;
+}
+.content  {
+   margin: 20rpx;
+  width:auto;
+  height:200rpx;
+  border:1rpx solid #e6e6e6; 
+  padding:20rpx;
+  overflow:scroll;
+  display: block;
+}
+.content  .se{
+  width:100%;
+  line-height:28rpx;
+  height:40rpx;
+  display: flex;
+}
+.content  .main{
+  margin-right: 20rpx;
+}

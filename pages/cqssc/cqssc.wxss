@@ -1,0 +1,52 @@
+/* pages/cqssc/cqssc.wxss */
+.impor_nav{
+	background:#ebebeb;
+	padding:.1rem .2rem;
+	display:-webkit-box;
+	-webkit-box-align:center;	
+}
+.item{
+	display:block;
+	border:1px solid #ccc;
+	text-align:center;
+	font-size:.24rem;
+	color:#4a4a4a;
+	margin-right:.1rem;
+	border-radius:.08rem;
+	height:.5rem;
+	line-height:.52rem;
+	width:.1rem;
+}
+.item1{
+	background:#fff url(../../web/images/11.png) no-repeat 10% center;
+	background-size:.31rem .29rem;
+	vertical-align:middle;
+	padding-left:.25rem;
+	width:18%;
+}
+.item2{
+	background:#fff url(../../web/images/22.png) no-repeat 10% center;
+	background-size:.28rem .27rem;
+	padding-left:.32rem;
+}
+.item3{
+	background:#fff url(../../web/images/33.png) no-repeat 10% center;
+	background-size:.30rem .30rem;
+	padding-left:.32rem;
+}
+.item4{
+	background:#fff url(../../web/images/44.png) no-repeat 10% center;
+	background-size:.27rem .28rem;
+	margin-right:0;
+	padding-left:.2rem;
+}
+.item.on{
+	color:#da3231;
+}
+.h1{
+  background:url(../../web/images/zst_red.png) no-repeat left center;
+	background-size:.09rem .31rem;
+	padding:.1rem .2rem;
+	color:#666;
+	font-size:0.8rem;
+}

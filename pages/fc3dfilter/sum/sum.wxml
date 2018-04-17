@@ -1,0 +1,14 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+      <view class='num_code'>
+            <view wx:for="{{['百十位和','百个位和','十个位和','任意两码和']}}" data-i="{{index}}" bindtap="select" class="{{sle[index] == true?'number_choose_item_red':''}} num_detail" bindtap="numChange">{{item}}</view>
+      </view>
+      <template is="ji" data="{{...boxAdd}}"/>
+  <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>
+

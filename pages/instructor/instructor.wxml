@@ -1,0 +1,18 @@
+<!--pages/instructor/instructor.wxml-->
+<view class='content'>
+    <view class='title'>
+     <block wx:for="{{intro}}" class="ts">
+            <view class="text{{item.show?' choose':''}}" bindtap='change' data-t="{{index}}"> 
+              {{item.text}}
+            </view>      
+        </block>
+    </view>
+    <block wx:for="{{intro}}" class="ts">
+        <view class='detail' wx:if="{{item.show}}"> 
+          <block wx:for="{{item.content}}" wx:for-item="il">
+              <view>{{il}}</view>
+          </block>
+           <image class='pic'wx:if="{{item.picOff}}" src="{{item.img}}" class="{{item.picOff?'good':''}}{{item.picOff02?' good02':''}}" ></image>
+        </view>
+    </block>
+</view>

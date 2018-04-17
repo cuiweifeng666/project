@@ -1,0 +1,75 @@
+  <view style="{{h==true?'height:1500rpx;':'height:1700rpx;'}}">
+  <view class='number_choose_bd' >
+         <!--<view class='number_choose_item'> class='number_choose_item_sub' class='number_choose_item_span'-->
+         <block wx:for="{{['万','千','百','十','个']}}" wx:for-item="j"  class='number_choose_list'  wx:for-index="y">
+             <view class='number_choose_item'>
+                <span>{{j}}:</span>
+                <view wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}" wx:for-item="i" wx:for-index="u">
+                    <view bindtap="selectCir" data-t="{{y}}" data-y="{{u}}"  class="{{zxfilterlist.circle[y][i] == true ? 'number_choose_item_red' : ''}}">{{u}}</view>
+                </view>
+              </view>
+         </block>
+         <view class='number_choose_button'>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon02_05.png"></image>
+                <view bindtap='notSelect'>反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+        
+        </view>
+         <view class='gray'></view>
+        <!--过滤条件-->  
+        <view class="content_filter">
+             <view class='content_filter_h1'>
+             <view class='content_filter_h1_suff'></view>
+             过滤条件</view>
+             <view>
+                <block wx:for="{{filterlist.data}}" wx:key="{{filterlist.data}}">
+                  <view class="content_filter_li">
+                    <block wx:for="{{item.element}}" wx:for-item="element" wx:for-index="i">
+                      <navigator  url="{{element.tourl}} " data-t="{{index}}" wx:if="{{element.choose}}"
+                       hover-class="navigator-hover" class="content_filter_li_item{{element.se==true?' number_choose_item_red':''}}">
+                          {{element.title}}
+                      </navigator>
+                      <view wx:if="{{element.show}}" style="{{element.show?'background:#FEF6E3 ;':''}}" hover-class="navigator-hover" class='content_filter_li_item'  bindtap="showOrNo" data-z="{{h}}" data-s="{{i}}"> 
+                           {{element.title}}
+                          <image   src="{{element.imgtour}}"></image>
+                      </view>
+                    </block>
+                  </view>
+                </block>
+             </view>
+        </view>
+        <view class='gray'></view>
+        <!--过滤结果-->
+        <view class='filter_result' >
+            <view class='filter_result_h1'>
+                <view class='filter_result_h1_suff'></view>
+                过滤结果
+                <view class='filter_result_h1_suff2'>
+                  共：
+                  <view id="sd_zhu" class='filter_result_h1_suff2_first'>{{far}}</view>
+                  注，
+                  <view id="sd_money" class='filter_result_h1_suff2_last'>{{money}}</view>
+                  元
+                </view>
+             </view>
+             <scroll-view class='filter_result_context' scroll-y="true">
+                    <text selectable="true" class='fli'>{{val}}</text> 
+             </scroll-view>
+        </view>
+        </view>
+  <view class='filter_btn'>
+            <button type="defaule" bindtap="copyNum" class='filter_btn_item'>复制号码</button>
+            <button type="defaule" bindtap="deleteCookie" class='filter_btn_item'>清空条件</button>
+            <button type="defaule" bindtap="getDatasoure" class='filter_btn_item red'>点击过滤</button>
+            <button type="defaule" bindtap="getDatasoure02" class='filter_btn_item red'>机选20注</button>
+</view> 

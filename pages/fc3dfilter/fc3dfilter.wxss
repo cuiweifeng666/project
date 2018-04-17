@@ -1,0 +1,295 @@
+/* pages/fc3dfilter/fc3dfilter.wxss */
+@import '../common/roundnooption.wxss';
+
+Page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow-y:scroll;
+  background: #fff;
+} 
+
+.swiper-tab{  
+    position: relative;
+    width: 100%;  
+    text-align: center;  
+    line-height: 60rpx;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top:30rpx;
+    background-color:white;
+     /* padding:10rpx;    */
+}  
+.swiper-tab-list{  
+    
+        display:block;
+    line-height: 60rpx;
+    height:60rpx; 
+    width: 200rpx;  
+    color: #da3231;  
+}  
+.swiper-tab .diagShow {  
+  position: absolute;
+  width:50rpx ;
+  height: 50rpx;
+  left:580rpx;
+  top:10rpx;
+}
+.content {  
+    font-size: 30rpx;  
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    border:2rpx solid #da3231;
+     height:60rpx; 
+    border-radius:6rpx;
+}
+.on{ color: #fff;  
+    background:#da3231;
+    border-radius:4rpx;
+}  
+  
+.swiper-box{ display: block; margin:20rpx; }  
+/*.swiper-box view{  
+    text-align: left;  
+}*/
+
+.number_choose_bd{
+	background:#fff;	
+  padding:10px 0;
+	border:1px solid #e7e7e7;
+  display:block;
+}
+
+.number_choose_bd view{  
+    text-align: center;  
+}
+
+.number_choose_list{
+	padding:0 0;
+	border:1px solid #e7e7e7;
+	display:block;
+}
+/*选号*/
+.number_choose_item{
+	height:50rpx;
+  margin-bottom:20rpx;
+	line-height:50rpx;  
+  padding:0 4rpx;
+  display:-webkit-box;
+}
+
+.number_choose_item span{
+	color:#b9b9b9;
+	font-size:32rpx;
+	display:inline-block; 
+	width:60rpx; 
+}
+
+.number_choose_item view view{                      
+	display:inline-block;     
+	width:50rpx;
+	height:50rpx;
+	line-height:50rpx;
+	border-radius:50%;
+	background:#fff;
+	color:#b9b9b9;
+	border:1px solid #b9b9b9;
+	text-align:center;
+	margin:0 .10rem;  
+}
+.number_choose_item_red{
+	color:#fff!important;
+	border:1px solid #d70e07!important;
+	background:#d70e07!important;
+}
+
+/*全选，反选等按钮样式*/
+.number_choose_button{
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	margin-top:30rpx;
+  display:-moz-box;
+  -moz-box-pack:center;
+  text-align:center;
+  width:100%;
+  height:33px;
+	line-height:33px;  
+	padding:0 8px; 
+  display:-webkit-box;
+}
+.number_choose_button_item{
+	display:-webkit-box;
+	margin:0 .5rem;
+	height:1.5rem;
+	line-height:1.5rem;
+    display:-moz-box;
+}
+.number_choose_button_item image{
+	width:1.5rem;
+	height:1.5rem;
+}
+.number_choose_button_item view{
+	width:2.5rem;
+	height:1.4rem;
+	line-height:1.4rem;
+	background:#fff;
+	font-size:.8rem;
+	color:#b9b9b9;
+	border:1px solid #b9b9b9;
+	text-align:center;
+	margin-left:-1px;
+}
+
+/*过滤条件*/
+.content_filter{
+	margin:.5rem;
+}
+.content_filter_h1{
+	border-bottom: 1px solid #eaeaea;
+    line-height: 1rem;
+    color: #273648;
+    font-size: .8rem;
+    font-weight: bold;
+    padding-bottom:.5rem;  
+    text-align: left;     
+}
+.content_filter_h1_suff
+{
+  display: inline-block;
+    width: .1rem;
+    height: .8rem;
+    background: #273648;
+    margin-right: .4rem; 
+}
+
+.content_filter_li{
+	margin:.5rem 0;
+}
+
+.content_filter_li_item{
+  position: relative;
+	padding:.3rem 0;
+	width:22%;
+	text-align:center;
+	font-size:.8rem;
+	border:1px solid #e8e8e8;
+	border-radius:.3rem;
+	color:#666;
+	margin:0 .17rem;
+	display:inline-block;
+	background:#fff;
+  margin-bottom:10rpx;
+}
+.content_filter_li_item image{ 
+  display:inline-block;
+  right:10rpx;
+  top:15rpx;
+  width:26rpx;
+  height:16rpx;
+}
+/*过滤结果*/
+.filter_result{
+	margin:.8rem;
+}
+.filter_result_h1{
+    line-height: 1rem;
+    color: #273648;
+    font-size: .8rem;
+    font-weight: bold;
+    padding-bottom:.5rem;
+    display: flex;  
+    flex-direction: row;  
+}
+.filter_result_h1_suff{
+	display: inline-block;
+    width: .1rem;
+    height: .8rem;
+    background: #273648;
+    margin-right: .4rem;
+}
+.filter_result_h1_suff2{
+	font-size:.6rem;
+	color:#d6d6d6;
+	font-weight:normal;
+  display: flex;  
+  flex-direction: row;  
+}
+
+.filter_result_h1_suff2_first{
+	font-size:.6rem;
+	color:#2b2ed9;
+	font-style:normal;
+}
+.filter_result_h1_suff2_last{
+	font-size:.6rem;
+	color:#d70e07;
+	font-style:normal;
+}
+.filter_result_context{
+	border:1px solid #e7e7e7;
+	background:#fff;
+	height:300rpx;
+   display: block;
+   overflow: scroll;  
+ white-space: pre-wrap;  
+  overflow-wrap: break-word;
+}
+.fli {
+  white-space: pre-wrap;
+  height:700rpx;
+}
+/*过滤按钮*/
+.filter_btn{
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+	position:fixed;
+	bottom:0;
+	height:3rem;
+	width:100%;
+	background:#e4e4e4;
+	border-top:1px solid #ccc;
+	z-index:1;  
+    text-align:center;  
+}
+
+.filter_btn_item{
+	padding:.1rem .5rem;
+	display:inline-block;
+	margin:.3rem .3rem;
+	background:#4A90E2;
+	border:1px solid #e7e7e7;
+	font-size:.8rem;
+	color:#fff;
+} 
+.red {
+  	background:#da3231;
+}
+
+/*组选*/
+.number_choose_li{
+	display:-webkit-box;  
+	-webkit-box-pack:center;    
+	padding:10rpx 0;
+}
+
+.number_choose_li_item{
+  padding:0 1rem;
+	text-align:center;
+	font-size:.8rem;
+	border-radius:.3rem;
+	color:#666;
+	display:inline-block;
+	width:140rpx;
+	line-height:1.5rem;
+}
+.seo {
+  display: flex;
+  justify-content: center;
+}

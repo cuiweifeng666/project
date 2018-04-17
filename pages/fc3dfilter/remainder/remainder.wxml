@@ -1,0 +1,16 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='ALL'>
+      <view class='num_code'>
+            <view wx:for="{{['除3余数','除4余数','除5余数','除6余数','除7余数']}}" data-i="{{index}}" bindtap="select" class="{{sle[index] == true?'number_choose_item_red':''}} num_detail" bindtap="numChange">{{item}}</view>
+      </view>
+</view>
+<view class='numberALL'>
+      <template is="ji" data="{{...boxAdd}}"/>
+  <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>
+

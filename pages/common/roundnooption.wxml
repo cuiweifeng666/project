@@ -1,0 +1,184 @@
+<!--pages/common/roundnooption.wxml-->
+<template name="roundnooption">
+<view class="number_box">  
+    <!--头部-->
+    <view id= "head" class="number_box_h1 clearfix">
+         <span></span>
+         <text>{{title}}</text>
+         <navigator url="{{headLinkUrl}}" hover-class="navigator-hover" hidden="{{ !headRightDisplay }}" >
+           <text wx:if='{{titleTrue}}'>{{headRightTitle}}</text>
+         </navigator>
+    </view>
+    <!--号码部-->
+    <view id= "context" class="number_box_context">
+        <view wx:for="{{selectContextList}}" wx:for-index="i">          
+              <view  class="{{item == true?' number_choose_item_red':''}}" bindtap="selectNo" data-group="{{i}}" data-t="{{area}}"> {{i}} </view>
+
+                </view>
+    </view>
+    <!--按钮部-->
+    <view id= "option" class="number_box_control" wx>
+         <button type="default" hover-class="none" bindtap="setSelected" data-t="{{area}}">全选</button>
+         <button type="default" hover-class="none" bindtap="setClear" data-t="{{area}}">清除</button>
+    </view>
+    <!--尾部-->
+    <view id= "footer" class="number_box_footer" hidden="{{ !footerDisplay }}">
+          <text>出现：</text>
+          <view wx:for="{{selectFootList}}" wx:for-index="u">
+              <view data-s="{{u}}" bindtap="selectFootNo"   class="{{item == true ? 'number_choose_item_red' : ''}}" data-t="{{area}}" >{{u}}</view>
+          </view >
+    </view>       
+</view>  
+</template>
+<template name="round">
+<view class="number_box">  
+    <!--头部-->
+    
+    <!--号码部-->
+    <view id= "context" class="number_box_context">
+        <text>{{title}}</text>
+        <view wx:for="{{selectContextList}}" wx:for-index="i">          
+              <view  class="{{item == true?' number_choose_item_red':''}}" bindtap="selectNo" data-group="{{i}}" data-t="{{area}}"> {{i}} </view>
+
+                </view>
+    </view>
+    <!--按钮部-->
+
+    <!--尾部-->
+    <view id= "footer" class="number_box_footer" hidden="{{ !footerDisplay }}">
+          <text>出现</text>
+          <view wx:for="{{selectFootList}}" wx:for-index="u">
+              <view data-s="{{u}}" bindtap="selectFootNo"   class="{{item == true ? 'number_choose_item_red' : ''}}" data-t="{{area}}" >{{u}}</view>
+          </view >
+    </view>       
+</view>  
+</template>
+<template name="head">
+     <view id= "head" class="number_box_h1 clearfix" wx:if="{{headOff}}">
+          <span class="fl"></span>
+          <text class="fl">{{title}}</text>
+           <image  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAAH6ji2bAAAABGdBTUEAALGPC/xhBQAAAshJREFUOBF9VD9oE1EY/967yyAV0yK1pXeJVlzbFFJwEgXRQRDrkMkhq4OrnTO4WHd3hWLBwVLBTXB0aDF3mQqVlpoEq4g1VRDSu+f3+y7vvJypD+6+/9/7/j4iPoH2tgH/IkINfk3tfxc0cPxVQZraMxS45etZNfo4cbEIhghS3SEVJkLHq/F9R6ZaLYiMnfWBtNzSTYGOf1cE+JlazQFs6tJ9QDmh9h8ACRxvjW/zVxJ27m8aDQ3fu+MXxrOipus/To0QjVUI3NIVNtgFTzIcWHG0PVTmKOsFOJTCYnnC8gOnfJuQF66wTEAuxvshWvs7yjJanG9szDNDelkp1SGK7pFRi5W4fcnqCIRnlBWh8LeNOIcUQCCz/PVIEJVARcQAV2bbF7r+1dbY7JT1BmXgGnFVjvffguArmTTno9/9Dc60Dl7xTGESYWgEDwZOJe7oStR5zhnuKxOL19nDvUNj6JFOMkwU8ecePjVkivNxO9vGGQ6Uy5A5yujuQtSREUnZSm1wXP5OymCE4/yZpVGNzLANZjmrASMeZjsUaWfEszKbRM4qZ+4pilc4gfpc1H4F+1TROktaSU94bs+x9I0x+p1NWByo+BoZusWmX7Sih9aRtU+hdJHXLtukVHgCAl2sqk1D1GRmuED5kYAQO4VZwhgPvmM2bohh5gdblEKKKAOIvcsd3slldrIXFPzLVtRyyzfgmHv8wvIsxO7KG4EIZHGsZAT85Pun2OD1IMoPwdT8WF4NPuDLZUEXxc4rZOlvXQq4e9Nq8uzpykH4iw547XIn6Th17YvVs+9ETk9IbFBYKFdHycCDLUfXk2WZjzovMUc/ev2vJ3WYV61OJrozyiFsYAsf8JXqYMGT0fH66Nr/IpZHgXW4pn3YpI8De/tnsHED2t9qfl4ypJbImEVmzYDPp0tKbSoy63ML0+tqa0sej0SU/P8AI2ZBlxwbhVIAAAAASUVORK5CYII=" bindtap="diagShow" class='diagShow fl'></image>
+          <!-- <navigator url="{{headLinkUrl}}" hover-class="navigator-hover"  >
+            <text wx:if='{{titleTrue}}'>{{headRightTitle}}</text>      
+          </navigator> -->
+      </view>
+</template>
+<template name="number">
+      <view class='num_group' wx:for="{{bigOrd}}" wx:for-index="s" wx:for-item="obj">
+                 <view class='numLit'>{{obj.numLit}}</view>
+                <view  wx:for="{{obj.ordNum}}" wx:for-item="st" wx:for-index="i" > 
+                  <view class="{{st == true ? 'number_choose_item_red' : ''}}" bindtap="numSel" data-t="{{i}}" data-y="{{s}}">{{i}}</view>
+              </view>  
+      </view>
+      <view class='number_choose_button'>
+             <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon02_05.png"></image>
+                <view bindtap='notSelect'>反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+</template>
+<template name="number_more">
+      <view class='num_group' wx:for="{{bigOrd}}" wx:for-index="s" wx:for-item="obj">
+                 <view class='numLit'>{{obj.numLit}}</view>
+                <view  wx:for="{{obj.ordNum}}" wx:for-item="st" wx:for-index="i" > 
+                  <view class="{{st == true ? 'number_choose_item_red' : ''}}" bindtap="numSel" data-t="{{i}}" data-y="{{s}}">{{i}}</view>
+              </view>  
+      </view>
+      <view class='number_choose_button'>
+             <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon02_05.png"></image>
+                <view bindtap='notSelect'>反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+</template>
+<template name="footer">
+    <view class='bottom'>
+        <button  hover-class="none" bindtap="cancel"  data-ty="1" class="cancel">取消</button>
+        <button hover-class="none"  class="sure" bindtap="sure" data-ty="2">确定</button>
+    </view>
+</template>
+<template name="ji">
+      <view class="number">
+        <block wx:for="{{box}}" wx:for-index="a" >
+            <view class="num_box{{box[a] == true?' number_choose_item_red':''}}" bindtap="boxTap" data-ch="{{a}}">{{a}}</view>
+        </block>
+      </view>
+</template>
+<template name="codeAll">
+      <view class='number_choose_button'>
+             <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon02_05.png"></image>
+                <view bindtap='notSelect'>反选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+</template>
+<template name="scale">
+    <view class='select clearfix' style="{{bord == true?'border-bottom:1rpx solid #e6e6e6':''}}">
+      <text class='fl'>{{head}}</text>
+      <view class='select_name fl'>
+        <view bindtap="chooseBtn" wx:for="{{select}}" wx:for-index="t" class="select_group{{choose[t] == true?' red':''}}" data-ch ="{{t}}" data-area ="{{area}}" >
+          {{item}}
+          </view>
+      </view>
+    </view>
+</template>
+<template name="btnSel">
+     <view class='number_choose_button'>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon01_03.png"></image>
+                <view bindtap='allSelect'>全选</view>
+            </view>
+            <view class='number_choose_button_item'>
+                <image src="../../../web/images/icon03_07.png"></image>
+                <view bindtap='clearSelect'>清除</view>
+            </view>
+         </view>
+</template>
+<template name="map">
+  <view class='each'>
+    <view class='name'>{{item.name}}</view>
+    <view class='near'>近</view>
+    <input bindinput="userNameInput" focus="{{focus}}" bindtap="listener"  data-ch="{{item.num}}">{{item.int}}</input>
+    <view class='time'>期</view>
+  </view>
+</template>
+<template name="last">
+        <block wx:for="{{box}}" wx:for-index="a" >
+            <view class="num_group01{{select[a] == true?' red':''}}" bindtap="boxTap" data-ch="{{a}}">{{item}}</view>
+        </block>
+</template>
+<template name="question">
+    <view  style="{{off == true?'display:block;':'display:none;'}}" class="mask_content">
+      <view class='mask'>
+      </view>
+      <view class='diag_show'>
+          <view class='diag_title'>{{title}}</view>
+          <scroll-view class='diag_content' scroll-y="true"><view>{{content}}</view></scroll-view >
+          <view class='diag_bottom' bindtap="que">确定</view>
+      </view>
+    </view>
+</template>

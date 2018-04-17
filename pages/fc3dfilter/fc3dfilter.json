@@ -1,0 +1,28 @@
+{
+  "navigationBarTitleText": "福彩3D/排列三过滤工具",
+  "tabBar": {
+    "color": "#000000",
+    "borderStyle": "black",
+    "selectedColor": "#da3231",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "web/images/11.png",
+        "selectedIconPath": "web/images/11.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/filtertool/filtertool",
+        "iconPath": "web/images/44.png",
+        "selectedIconPath": "web/images/44.png",
+        "text": "过滤工具"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "web/images/33.png",
+        "selectedIconPath": "web/images/33.png",
+        "text": "日志"
+      }
+    ]
+  }
+}

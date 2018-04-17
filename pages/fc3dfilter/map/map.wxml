@@ -1,0 +1,12 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+        <view wx:for="{{sel.ele}}" wx:for-item="item">
+            <template is="map" data="{{item}}"/>
+        </view>
+</view>
+<template is="footer" data=""/>
+

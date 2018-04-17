@@ -1,0 +1,22 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+      <template is="number" data="{{...num}}"/>
+      <!-- <template is="ji" data="{{...boxAdd}}"/> -->
+  <!-- <template is="codeAll" />  -->
+</view>
+<view class='pic_group'>
+    <image class='pic' src="{{url}}" bindtap="subminBtn"></image>
+</view>
+  <!-- {{index+1}}、条件{{item}} -->
+  <scroll-view class='content' scroll-y="true">
+      <view wx:for="{{textArr}}" class='se' >
+          <view class='main'>{{index+1}}、条件{{item}}</view>
+          <view class='clearText' data-u="{{index}}" bindtap="clear">清除</view>
+      </view>
+  </scroll-view>
+<template is="footer" data=""/>
+

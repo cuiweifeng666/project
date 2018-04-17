@@ -1,0 +1,7 @@
+<!--pages/fc3dfilter/position/position.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+ <template is="head" data="{{...head}}" />
+<template is="number" data="{{...num}}" />
+<template is="footer" />
+<view>{{kj}}</view>

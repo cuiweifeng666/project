@@ -1,0 +1,43 @@
+<!--pages/fc3dfilter/space/space.wxml-->
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+
+<template is="question" data="{{...question}}"/>
+<!-- boxAdd[0].content -->
+<view class='numberGroup'>
+      <view class='title'>{{group[0]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{['0','1','2','3','4','5','6','7','8','9']}}"  data-s="{{index}}" class="num_detail{{boxAdd[0].content[index] == true?' number_choose_item_red':''}}"  bindtap="changeNum" data-area="0">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='numberGroup'>
+      <view class='title'>{{group[1]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{['0','1','2','3','4','5','6','7','8','9']}}"  data-s="{{index}}" class="num_detail{{boxAdd[1].content[index] == true?' number_choose_item_red':''}}" bindtap="changeNum" data-area="1">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='numberGroup'>
+      <view class='title'>{{group[2]}}</view>
+      <view class='num_code'>
+          <view wx:for="{{['0','1','2','3','4','5','6','7','8','9']}}"  data-s="{{index}}" class="num_detail{{boxAdd[2].content[index] == true?' number_choose_item_red':''}}"  bindtap="changeNum" data-area="2">
+              {{item}}
+          </view>
+      </view>
+</view>
+<view class='pic_group'>
+    <image class='pic' src="{{url}}" bindtap="subminBtn"></image>
+</view>
+  <!-- {{index+1}}、条件{{item}} -->
+  <scroll-view class='content' scroll-y="true">
+      <view wx:for="{{textArr}}" class='se' >
+          <view class='main'>{{index+1}}、条件{{item}}</view>
+          <view class='clearText' data-u="{{index}}">清除</view>
+      </view>
+  </scroll-view>
+<template is="footer" data=""/>
+
+

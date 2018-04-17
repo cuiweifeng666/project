@@ -1,0 +1,13 @@
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+<template is="question" data="{{...question}}"/>
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+      <view class='num_code'>
+            <view wx:for="{{['凹下型','凸起型','上升型','下降型','平行型','偏类型']}}" data-i="{{index}}" bindtap="select" class="{{sle[index] == true?'number_choose_item_red':''}} num_detail" bindtap="numChange">{{item}}</view>
+      </view>
+  <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>
+

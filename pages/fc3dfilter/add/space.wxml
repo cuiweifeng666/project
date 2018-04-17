@@ -1,0 +1,14 @@
+<!--pages/fc3dfilter/space/space.wxml-->
+<!--pages/fc3dfilter/numb/numb.wxml-->
+<import src="../../common/roundnooption"/>
+
+<template is="head" data="{{...head}}"/>
+
+<view class='numberALL'>
+ 
+      <template is="ji" data="{{...boxAdd}}"/>
+  <template is="codeAll" /> 
+</view>
+<template is="footer" data=""/>
+
+
